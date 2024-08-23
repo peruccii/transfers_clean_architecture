@@ -4,6 +4,10 @@ public enum ErrorCodeEnum {
 
     ON0001("TAX NUMBER INVALID", "ON-0001"),
 
+    ON0002("EMAIL ALREADY EXISTS", "ON-0001"),
+
+    ON0003("TAX NUMBER UNAVAILABILITY", "ON-0001"),
+
     TR0001("USER SHOPKEEPER DOESNT HAVE PERMISSION TO DO TRANSFERS", "TR-0001"),
 
     TR0002("INSUFFICIENT BALANCE", "TR-0002"),
@@ -12,9 +16,9 @@ public enum ErrorCodeEnum {
 
     ;
 
-    private String message;
+    private final String message;
 
-    private String code;
+    private final String code;
 
 
     ErrorCodeEnum(String message, String code) {

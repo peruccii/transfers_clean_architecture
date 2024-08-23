@@ -12,7 +12,7 @@ public class TransactionPin {
 
     private String pin;
 
-    private String attempt;
+    private Integer attempt;
 
     private Boolean blocked;
 
@@ -20,7 +20,7 @@ public class TransactionPin {
 
     private LocalDateTime updatedAt;
 
-    public TransactionPin(Long id, User user, String pin, String attempt, Boolean blocked, LocalDateTime createdAt, LocalDateTime updatedAt) {
+    public TransactionPin(Long id, User user, String pin, Integer attempt, Boolean blocked, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.id = id;
         this.user = user;
         this.pin = pin;
@@ -30,11 +30,11 @@ public class TransactionPin {
         this.updatedAt = updatedAt;
     }
 
-    public TransactionPin(User user, String pin, String attempt, Boolean blocked) {
+    public TransactionPin(User user, String pin) throws TransactionPinException {
         this.user = user;
-        this.pin = pin;
-        this.attempt = attempt;
-        this.blocked = blocked;
+        this.setPin(pin);
+        this.attempt = 3;
+        this.blocked = false;
         this.createdAt = LocalDateTime.now();
     }
 
@@ -71,11 +71,11 @@ public class TransactionPin {
                 ErrorCodeEnum.TRP0001.getCode());
     }
 
-    public String getAttempt() {
+    public Integer getAttempt() {
         return attempt;
     }
 
-    public void setAttempt(String attempt) {
+    public void setAttempt(Integer attempt) {
         this.attempt = attempt;
     }
 
