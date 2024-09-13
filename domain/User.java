@@ -5,8 +5,11 @@ import java.util.Objects;
 import java.util.UUID;
 
 import com.example.cleanarch.domain.enums.UserTypeEnum;
+import lombok.Getter;
+import lombok.Setter;
 
-
+@Getter
+@Setter
 public class User {
 
     private UUID id;
@@ -52,74 +55,6 @@ public class User {
     }
 
     public User() {}
-
-    public UUID getId() {
-        return id;
-    }
-
-    public void setId(UUID id) {
-        this.id = id;
-    }
-
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
-    public String getPassword() {
-        return password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
-
-    public TaxNumber getTaxNumber() {
-        return taxNumber;
-    }
-
-    public void setTaxNumber(TaxNumber taxNumber) {
-        this.taxNumber = taxNumber;
-    }
-
-    public void setIsFirstLogin(Boolean isFirstLogin) {
-        this.isFirstLogin = isFirstLogin;
-    }
-
-    public Boolean isFirstLogin() {
-        return isFirstLogin;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    public UserTypeEnum getType() {
-        return type;
-    }
-
-    public void setType(UserTypeEnum type) {
-        this.type = type;
-    }
-
-    public TransactionPin getTransactionPin() {
-        return transactionPin;
-    }
-
-    public void setTransactionPin(TransactionPin transactionPin) {
-        this.transactionPin = transactionPin;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
 
     @Override
     public boolean equals(Object o) {

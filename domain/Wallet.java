@@ -3,10 +3,14 @@ package com.example.cleanarch.domain;
 import com.example.cleanarch.domain.enums.UserTypeEnum;
 import com.example.cleanarch.exception.TransferException;
 import com.example.cleanarch.exception.enums.ErrorCodeEnum;
+import lombok.Getter;
+import lombok.Setter;
 
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 
+@Getter
+@Setter
 public class Wallet {
 
     private Long id;
@@ -59,35 +63,4 @@ public class Wallet {
       this.balance.subtract(value);
     }
 
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public BigDecimal getBalance() {
-        return balance;
-    }
-
-    public User getUser() {
-        return user;
-    }
-
-    public void setUser(User user) {
-        this.user = user;
-    }
-
-    public LocalDateTime getCreatedAt() {
-        return createdAt;
-    }
-
-    public LocalDateTime getUpdatedAt() {
-        return updatedAt;
-    }
-
-    public void setUpdatedAt(LocalDateTime updatedAt) {
-        this.updatedAt = updatedAt;
-    }
 }

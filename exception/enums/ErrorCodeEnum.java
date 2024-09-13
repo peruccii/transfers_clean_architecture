@@ -12,8 +12,11 @@ public enum ErrorCodeEnum {
 
     TR0002("INSUFFICIENT BALANCE", "TR-0002"),
 
+    TR0003("Occurred an error during transaction", "TR-0003"),
+
     TRP0001("PIN IS INVALID", "TRP-0001"),
 
+    WA0001("WALLET NOT FOUND", "WA-0001"),
     ;
 
     private final String message;

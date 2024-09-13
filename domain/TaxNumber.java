@@ -2,7 +2,11 @@ package com.example.cleanarch.domain;
 
 import com.example.cleanarch.exception.TaxNumberException;
 import com.example.cleanarch.exception.enums.ErrorCodeEnum;
+import lombok.Getter;
+import lombok.Setter;
 
+@Getter
+@Setter
 public class TaxNumber {
 
     private String value;
